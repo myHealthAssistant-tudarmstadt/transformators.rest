@@ -51,7 +51,7 @@ public class TransformationRepository implements ITransformationRepository {
 	public TransformationRepository() {
 		transformations = new ArrayList<StoredTransformation>();
 		
-		String filePath = "C:\\Temp\\transformators.rest\\transformations\\";
+		String filePath = "C:\\Temp\\";
 		logger.info(filePath);
 		
 		transformations.add(new StoredTransformation(
@@ -99,6 +99,12 @@ public class TransformationRepository implements ITransformationRepository {
 				HRFidelityEvent.EVENT_TYPE, 
 				filePath + "HrToHrFidelity.jar"));
 		
+//		transformations.add(new StoredTransformation(
+//				"myhealthassistant.transformation.HrToHrVariability", 
+//				new String[] {HeartRateEvent.EVENT_TYPE}, 
+//				.EVENT_TYPE, 
+//				filePath + "HrToHrVariability.jar"));
+//		
 		transformations.add(new StoredTransformation(
 				"myhealthassistant.transformation.HrToHrAlarm", 
 				new String[] {HeartRateEvent.EVENT_TYPE}, 
